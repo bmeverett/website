@@ -22,6 +22,15 @@ const CompanyCard = ({ frontmatter, image }) => {
           {startDate}-{endDate}
         </h5>
       </div>
+      <div className="">
+        {frontmatter.tags.map(tag => (
+          <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
+            <h4>
+              <small>{tag}</small>
+            </h4>
+          </Badge>
+        ))}
+      </div>
     </Container>
   )
 }
@@ -42,17 +51,7 @@ export default ({ html, frontmatter, image }) => {
       </Row>
       <Row>
         <Col className="col-md-4 col-1"></Col>
-        <Col className="col-md-8 col-1">
-          <div className="d-inline-flex">
-            {frontmatter.tags.map(tag => (
-              <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
-                <h4>
-                  <small>{tag}</small>
-                </h4>
-              </Badge>
-            ))}
-          </div>
-        </Col>
+        <Col className="col-md-8 col-1"></Col>
       </Row>
     </Container>
   )

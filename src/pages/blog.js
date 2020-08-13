@@ -46,7 +46,7 @@ export default ({ data }) => {
       <SEO title="Blog" />
       <PageTitle title="My Blog" />
       <Container className="px-5 mb-5 text-center">
-        <Form className="aurebesh blog-filter">
+        <Form className="blog-filter">
           <FormControl
             className="bg-none search"
             type="text"

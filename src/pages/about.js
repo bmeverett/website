@@ -1,31 +1,16 @@
-import React, { useContext } from "react"
+import React from "react"
 import { PageLayout, PageTitle } from "../components"
 import { Container, Image } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
-import { ThemeContext, SEO } from "../utils"
+import { SEO } from "../utils"
 
 export default ({ data }) => {
-  const MediaLink = ({ title, author, link }) => (
-    <li key={title} style={{ color: "gray" }}>
-      <a rel="noopener noreferrer" href={link}>
-        {title}
-      </a>
-      &nbsp;-<i>{author}</i>
-    </li>
-  )
-
   const {
     author,
     occupation,
-    readingList,
-    showsList,
     designations,
     unemployed,
   } = data.site.siteMetadata
-  const { toString } = useContext(ThemeContext)
-
-  const bookLinks = readingList.map(book => MediaLink(book))
-  const showLinks = showsList.map(show => MediaLink(show))
 
   return (
     <PageLayout>
@@ -36,7 +21,7 @@ export default ({ data }) => {
           rounded
           width="140"
           height="140"
-          src={`../../icons/luke-${toString()}.png`}
+          src={`../../icons/Image.png`}
           alt={author}
         />
         <article className="w-75 m-auto pt-2 text-justify">
@@ -98,20 +83,6 @@ export default ({ data }) => {
             </>
           )}
           <hr />
-          <h5 className="watch-list-title pt-4">
-            Here are a couple of books from my reading list:
-          </h5>
-          <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{bookLinks}</ul>
-          <h5 className="watch-list-title pt-4">
-            Here are a couple of shows from my watch list:
-          </h5>
-          <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{showLinks}</ul>
-          <h5 className="watch-list-title pt-4">
-            Here are a couple of movies from my watch list:
-          </h5>
-          <p>
-            <i>...waaaay too many to list.</i>
-          </p>
         </article>
       </Container>
     </PageLayout>
@@ -126,16 +97,6 @@ export const query = graphql`
         occupation
         author
         designations
-        readingList {
-          title
-          author
-          link
-        }
-        showsList {
-          title
-          author
-          link
-        }
       }
     }
   }
