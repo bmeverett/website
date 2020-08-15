@@ -39,16 +39,18 @@ export default ({ html, frontmatter, image }) => {
   return (
     <Container className="p-1 project-link text-center">
       <Row>
-        <Col className="col-md-4 col-12">
+        <Col className="col-md-6 col-12">
           <CompanyCard frontmatter={frontmatter} image={image} />
         </Col>
-        <Col className="col-md-8 col-12">
+        <Col className="col-md-6 col-12">
           <p
             className="text-justify mt-2"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </Col>
       </Row>
+      <br />
+      <br />
       <Row>
         <Col className="col-md-4 col-1"></Col>
         <Col className="col-md-8 col-1"></Col>

@@ -51,7 +51,7 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="https://linkedin.com"
+            href="http://www.linkedin.com/in/brandon-everett-30746b59"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -62,7 +62,7 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="mailto:johndoe@gmail.com"
+            href="mailto:bme2010@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
