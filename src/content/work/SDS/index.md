@@ -4,12 +4,7 @@ location: "Murrysville, PA"
 position: "Software Engineer"
 tags: ["React", "C#", "ASP.NET", ".NET CORE", "SQL Server", "Azure"]
 startDate: "2017-10-04"
-endDate: "2020"
+endDate: ""
 ---
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget augue commodo, rutrum enim vel, varius lorem. Ut nec sem metus.
-  Cras laoreet, metus consectetur mollis consectetur, dui ante tempus ante, eget luctus felis odio sed leo.
-- Sed tempus, ex ultrices porttitor fringilla, enim tellus dictum elit, quis viverra odio orci eu erat. Maecenas auctor ultrices ornare. Mauris consequat a urna in cursus.
-  Mauris hendrerit, sem sit amet dapibus ultrices, lacus quam malesuada lorem, interdum lacinia tortor augue maximus mauris.
-- Aliquam ultrices, lectus ac semper dictum, nisi eros sollicitudin purus, nec pharetra massa diam eu libero. Integer at metus vitae urna placerat vehicula. Donec ut sagittis risus, sed mattis mi.
-  Donec suscipit, ex vitae finibus faucibus, nisl est eleifend justo, quis porta ante massa sed arcu. Morbi dapibus, massa sit amet posuere porta, sapien tellus malesuada ipsum, et vehicula nunc diam vel lacus. Donec fringilla viverra massa vitae aliquet.
+At Software Design Solutions, I am employed as a Software Engineer and work across many different projects for different clients in a wide range of industries. My responsibilities range from writing proposals and estimating potential projects to full architecture and system design. Working in a smaller company allows me to work with all aspects of the software stack: designing databases in SQL, writing api and backend code in C#, and writing React or just html and javascript on the frontend.

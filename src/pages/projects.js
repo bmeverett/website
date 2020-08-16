@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { PageLayout, PageTitle, ProjectLink } from "../components"
+import { PageLayout, PageTitle, BlogLink } from "../components"
 import { SEO, Utils } from "../utils"
 import Container from "react-bootstrap/Container"
 
@@ -14,13 +14,16 @@ export default ({ data }) => {
     <PageLayout>
       <SEO title="Projects" />
       <PageTitle title="Projects" />
-      <Container className="text-left">
+      <Container
+        fluid
+        className="p-3 w-auto text-left d-flex flex-wrap justify-content-center"
+      >
         <section>
           {allProjects.map(({ node }) => (
             <div key={node.id} className="p-3">
-              <ProjectLink
+              <BlogLink
                 to={node.fields.slug}
-                featuredImages={featuredImageMap[node.fields.slug]}
+                featuredImage={featuredImageMap[node.fields.slug]}
                 title={node.frontmatter.title}
                 tags={node.frontmatter.tags}
                 excerpt={node.excerpt}

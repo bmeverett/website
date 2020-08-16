@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 const defaultState = {
   dark: true,
-  toString: () => `light`,
+  toString: () => `dark`,
   toggleDark: () => {},
 }
 
