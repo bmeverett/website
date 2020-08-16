@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import { SEO } from "../utils"
 
 export default ({ data }) => {
-  const { author, designations } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
 
   const html = data.allMarkdownRemark.edges[0].node.html
   return (
@@ -21,14 +21,6 @@ export default ({ data }) => {
           alt={author}
         />
         <article className="w-75 m-auto pt-2 text-justify">
-          <p className="text-center">
-            {designations.map((attr, i) => (
-              <span key={attr}>
-                &nbsp;<b>{attr}</b>&nbsp;
-                {i < designations.length - 1 && <>||</>}
-              </span>
-            ))}
-          </p>
           <About html={html} />
         </article>
       </Container>
@@ -43,7 +35,6 @@ export const query = graphql`
         unemployed
         occupation
         author
-        designations
       }
     }
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {

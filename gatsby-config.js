@@ -25,12 +25,6 @@ module.exports = {
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
     unemployed: false,
-    designations: [
-      `Coding Monkey`,
-      `Jedi Master`,
-      `Binary Sunset Enthusiast`,
-      `Moisture Farmer`,
-    ],
   },
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,

@@ -19,7 +19,7 @@ const CompanyCard = ({ frontmatter, image }) => {
         <h5 className="text-muted">{location}</h5>
         <h4 className="mt-2">{position}</h4>
         <h5 className="text-muted mt-2">
-          {startDate}-{endDate}
+          {startDate}-{endDate === "Invalid date" ? "Present" : endDate}
         </h5>
       </div>
       <div className="">
@@ -45,6 +45,7 @@ export default ({ html, frontmatter, image }) => {
         <Col className="col-md-6 col-12">
           <p
             className="text-justify mt-2"
+            style={{ fontSize: "18px" }}
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </Col>
