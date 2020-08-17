@@ -6,7 +6,7 @@ import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default ({ data }) => {
-  const { unemployed, firstName, lastName } = data.site.siteMetadata
+  const { firstName, lastName } = data.site.siteMetadata
   return (
     <PageLayout>
       <SEO title="Home" />
@@ -18,15 +18,9 @@ export default ({ data }) => {
           src={`../../icons/Image.png`}
           alt="Brandon Everett's picture"
         />
-        {unemployed && (
-          <p className="mt-2">
-            <b> Hey! I am looking for new opportunities :)</b>
-          </p>
-        )}
         <Container className="py-0 my-0">
           <h1
             style={{
-              fontSize: "5rem",
               color: "black",
             }}
           >
