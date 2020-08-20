@@ -6,7 +6,6 @@ export default ({ html }) => {
     <Container className="text-center">
       <p
         className="pt-3 text-justify"
-        style={{ fontSize: "18px" }}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Container>
