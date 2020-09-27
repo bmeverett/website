@@ -23,7 +23,7 @@ const CompanyCard = ({ frontmatter, image }) => {
         </h5>
       </div>
       <div className="">
-        {frontmatter.tags?.map(tag => (
+        {frontmatter.tags.map(tag => (
           <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
             <h4>
               <small>{tag}</small>
