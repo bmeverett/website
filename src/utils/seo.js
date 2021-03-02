@@ -5,11 +5,21 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
+const SEO = ({
+  description,
+  lang,
+  meta,
+  image: metaImage,
+  title,
+  pathname,
+}) => {
   const { site } = useStaticQuery(query)
 
   const metaDescription = description || site.siteMetadata.description
-  const image = img && img.src ? `${site.siteMetadata.siteUrl}${img.src}` : null
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null
 
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
@@ -30,14 +40,31 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
         { name: `twitter:description`, content: metaDescription },
       ]
         .concat(
-          img
+          metaImage
             ? [
-                { property: "og:image", content: image },
-                { property: "og:image:width", content: img.width },
-                { property: "og:image:height", content: img.height },
-                { name: "twitter:card", content: "summary_large_image" },
+                {
+                  property: "og:image",
+                  content: image,
+                },
+                {
+                  property: "og:image:width",
+                  content: metaImage.width,
+                },
+                {
+                  property: "og:image:height",
+                  content: metaImage.height,
+                },
+                {
+                  name: "twitter:card",
+                  content: "summary_large_image",
+                },
               ]
-            : [{ name: "twitter:card", content: "summary" }]
+            : [
+                {
+                  name: "twitter:card",
+                  content: "summary",
+                },
+              ]
         )
         .concat(meta)}
     />
